@@ -7,6 +7,7 @@ export default function MovieCard({ movie }) {
 
     function handleLike(e) {
         e.preventDefault();
+        e.preventDefault();
 
         if (favourite) {
             removeFav(movie.id); // Remove from favorites if already liked
