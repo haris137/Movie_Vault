@@ -26,9 +26,9 @@ function Plotubot() {
       const movieDesc = await Main(userMsg);
 
 
-      const processedText = movieDesc
-        .replace(/\*/g, "") 
-        .replace(/\n/g, "<br />"); 
+      const processedText = marked.parse(movieDesc)
+        // .replace(/\*/g, "") 
+        // .replace(/\n/g, "<br />"); 
 
       setChatHistory((history) => [...history, { role: "model", text: processedText }]);
     }, 300);
