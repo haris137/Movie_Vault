@@ -6,8 +6,5 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist', // Ensure this matches Vercel's default
-    rollupOptions: {
-      external: ['react-router-dom'],
-    },
   },
 })
